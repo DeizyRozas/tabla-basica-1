@@ -139,9 +139,85 @@ function longitudesPrevias(arr){
 console.log(longitudesPrevias(["programar","dojo","genial"]));
 
 
-/*Agrega Siete - Construye una función que acepte un array. Devuelve un nuevo array con todos los valores del original, pero sumando 7 a cada uno. No alteres el array original. Por ejemplo, agregaSiete([1,2,3) debería devolver [8,9,10] en un nuevo array. 
-Array Inverso - Dado un array, escribe una función que invierte sus valores en el lugar. Ejemplo: invertir([3,1,6,4,2)) devuelve el mismo array pero con sus valores al revés, es decir [2,4,6,1,3]. Haz esto sin crear un array temporal vacío. (Pista: necesitarás intercambiar (swap) valores).
-Perspectiva: Negativa - Dado un array crear y devuelve uno nuevo que contenga todos los valores del array original, pero negativos (no simplemente multiplicando por -1). Dado [1,-3,5], devuelve [-1,-3,-5].
-Siempre hambriento - Crea una función que acepte un array e imprima (print) “yummy” cada vez que alguno de los valores sea “comida”. Si ningún valor es “comida”, entonces imprime “tengo hambre” una vez. 
-Cambiar hacia el centro -  Dado un array, cambia el primer y último valor, el tercero con el ante penútimo, etc. Ejemplo: cambiaHaciaElCentro([true, 42, “Ada”, 2, “pizza”]) cambia el array a [“pizza¨, 42, “Ada”, true]. cambiaHaciaElCentro([1,2,3,4,5,6]) cambia el array a [6,2,4,3,5,1]. No es necesario devolver (return) el array esta vez. 
-Escala el Array - Dado un array arr y un número num, multiplica todos los valores en el array arr por el número num, y devuelve el array arr modificado. Por ejemplo, escalaArray([1,2,3], 3] debería devolver [3,6,9].*/
+/*Agrega Siete - Construye una función que acepte un array. Devuelve un nuevo array con todos los valores del original, 
+pero sumando 7 a cada uno. No alteres el array original. Por ejemplo, agregaSiete([1,2,3) debería devolver [8,9,10] en un 
+nuevo array. 
+*/
+
+function agregaSiete (arr){
+    var agrega = [];
+    for(var i = 0 ; i < arr.length; i++){
+        agrega[i] = arr[i]+7;
+    }
+    return agrega;
+}
+console.log(agregaSiete([1,2,3]));
+
+/*Array Inverso - Dado un array, escribe una función que invierte sus valores en el lugar. 
+Ejemplo: invertir([3,1,6,4,2)) devuelve el mismo array pero con sus valores al revés, es decir [2,4,6,1,3]. 
+Haz esto sin crear un array temporal vacío. (Pista: necesitarás intercambiar (swap) valores).
+*/
+
+function arrayInverso(arr){
+  
+    for (i = 1; i < arr.length; i++){
+        temp = arr[i];
+
+
+}
+
+
+
+/*Perspectiva: Negativa - Dado un array crear y devuelve uno nuevo que contenga todos los valores del array original, 
+pero negativos (no simplemente multiplicando por -1). Dado [1,-3,5], devuelve [-1,-3,-5].
+*/
+
+
+function perspectivaNeg (arr){
+    var temp = [];
+    for (i = 0; i < arr.length; i++){
+        if (arr[i] > 0){
+        temp[i] = arr[i]*-1;
+        }
+      else{
+        temp[i] = arr [i];
+      }
+    }
+    return temp;
+}
+console.log(perspectivaNeg([1,3,5,-8]));
+
+
+
+
+/*Siempre hambriento - Crea una función que acepte un array e imprima (print) “yummy” cada vez que alguno de los valores sea 
+“comida”. Si ningún valor es “comida”, entonces imprime “tengo hambre” una vez. 
+*/
+
+function siempreHambriento(arr){
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i]="comida") {
+            console.log("yummy");
+        }
+
+        else if (arr) {
+            console.log("tengo hambre");
+        }
+        
+    }
+    else if (arr) {
+        console.log("tengo hambre");
+    }
+}
+
+/*Cambiar hacia el centro -  Dado un array, cambia el primer y último valor, el tercero con el ante penútimo, etc.
+ Ejemplo: cambiaHaciaElCentro([true, 42, “Ada”, 2, “pizza”]) cambia el array a [“pizza¨, 42, “Ada”, true]. 
+ cambiaHaciaElCentro([1,2,3,4,5,6]) cambia el array a [6,2,4,3,5,1]. No es necesario devolver (return) el array esta vez. 
+*/
+
+
+
+
+
+/*Escala el Array - Dado un array arr y un número num, multiplica todos los valores en el array arr por el número num, 
+y devuelve el array arr modificado. Por ejemplo, escalaArray([1,2,3], 3] debería devolver [3,6,9].*/
