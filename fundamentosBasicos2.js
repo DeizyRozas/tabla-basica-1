@@ -1,5 +1,5 @@
 //Tamaño Grande - Dado un array, escribe una función que cambie todos los números positivos en él, por el string “big”. 
-//Ejemplo: grande([-1,3,5,-5]) devuelve [-1, “big”, “big”, -5].
+//Ejemplo: grande([-1,3,5,-5]) devuelve [-1, “big”, “big”, -5,8].
 
 function tamañoGrande (arr){
 
@@ -10,7 +10,7 @@ function tamañoGrande (arr){
     }
     return arr;
 }
-console.log(tamañoGrande([-1,3,5,-5]));
+console.log(tamañoGrande([-1,3,5,-5,8]));
 
 
 /*Imprime (print) el menor, devuelve (return) el mayor - Crea una función que tome un array de números. 
@@ -29,7 +29,7 @@ function menorMayor(arr){
             mayor = arr[i];
         }
     }
-    console.log(mayor);
+    console.log(menor);
     return mayor;
 }
 menorMayor([5,80,20,35]);
@@ -41,8 +41,9 @@ La función debería imprimir (print) el penúltimo valor y devolver (return) el
 function print(arr){
     console.log(arr[arr.length-2]);
     for (var i = 0; i < arr.length; i++) {
-        if(arr[i]%2==1);
+        if(arr[i]%2==1){
         return arr[i];
+        }
     }
 }
 print([2,4,5,75]);
@@ -159,12 +160,15 @@ Haz esto sin crear un array temporal vacío. (Pista: necesitarás intercambiar (
 */
 
 function arrayInverso(arr){
-  
-    for (i = 1; i < arr.length; i++){
+    var temp = [];
+    for (i = 0; i < arr.length/2 ; i++){
         temp = arr[i];
-
-
+        arr[i] = arr[arr.length-1-i];
+        arr[arr.length-1-i]=temp;
+    }
+    return arr;
 }
+console.log(arrayInverso([2,3,5,7,8]));
 
 
 
@@ -179,7 +183,7 @@ function perspectivaNeg (arr){
         if (arr[i] > 0){
         temp[i] = arr[i]*-1;
         }
-      else{
+        else{
         temp[i] = arr [i];
       }
     }
@@ -195,29 +199,46 @@ console.log(perspectivaNeg([1,3,5,-8]));
 */
 
 function siempreHambriento(arr){
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i]="comida") {
-            console.log("yummy");
-        }
+    var comer=0;
+    for (var i = 0; i < arr.length; i++) {
 
-        else if (arr) {
-            console.log("tengo hambre");
+        if (arr[i]=='comida') {
+            console.log('yummy');
+            comer=1;
         }
-        
     }
-    else if (arr) {
-        console.log("tengo hambre");
+    
+    if (comer==0) {
+        console.log('tengo hambre');
     }
 }
+siempreHambriento([2,8,3]);
 
 /*Cambiar hacia el centro -  Dado un array, cambia el primer y último valor, el tercero con el ante penútimo, etc.
  Ejemplo: cambiaHaciaElCentro([true, 42, “Ada”, 2, “pizza”]) cambia el array a [“pizza¨, 42, “Ada”, true]. 
  cambiaHaciaElCentro([1,2,3,4,5,6]) cambia el array a [6,2,4,3,5,1]. No es necesario devolver (return) el array esta vez. 
 */
 
-
+function centro(x){
+    for(i = 0; i < x.length/2; i=+2){
+        temp = x[i];
+        x[i] = x[x.length-1-i];
+        x[x.length-1-i] = temp;
+    }
+    return x;
+}
+console.log(centro([1,2,3,4,5,6]));
 
 
 
 /*Escala el Array - Dado un array arr y un número num, multiplica todos los valores en el array arr por el número num, 
 y devuelve el array arr modificado. Por ejemplo, escalaArray([1,2,3], 3] debería devolver [3,6,9].*/
+
+function escala(x,y){
+    for(i = 0; i < x.length ; i++){
+        x[i]=x[i]*y;
+    }
+
+    return x;
+}
+console.log(escala([1,2,3],3));
