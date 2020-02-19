@@ -10,6 +10,7 @@ function tamañoGrande (arr){
     }
     return arr;
 }
+console.log('ejercicio 1 =');
 console.log(tamañoGrande([-1,3,5,-5,8]));
 
 
@@ -32,6 +33,7 @@ function menorMayor(arr){
     console.log(menor);
     return mayor;
 }
+console.log('ejercicio 2 =');
 menorMayor([5,80,20,35]);
 
 
@@ -46,6 +48,7 @@ function print(arr){
         }
     }
 }
+console.log('ejercicio 3 =');
 print([2,4,5,75]);
 
 
@@ -60,6 +63,7 @@ function dobleVision(arr){
     }
     return doble;
 }
+console.log('ejercicio 4 =');
 console.log(dobleVision([1,2,3]));
 
 /*Contar Positivos -  Dado un array de números, crea una función para reemplazar el último valor con el número de 
@@ -77,7 +81,8 @@ function contarPositivos(arr){
     arr[arr.length-1]=positivos;
     return arr;
 }
-console.log(contarPositivos([-1,1,1,1]));
+console.log('ejercicio 5 =');
+console.log(contarPositivos([-1,1,6,2,-1]));
 
 
 
@@ -105,7 +110,7 @@ function paresImpares(arr){
         }
     }
 }
-
+console.log('ejercicio 6 =');
 paresImpares([3,5,7,4,2,4]);
 
 
@@ -122,6 +127,7 @@ function incremento(arr){
     }
     return arr;
 }
+console.log('ejercicio 7 =');
 console.log(incremento([2,3,5,7,8,2,5]));
 
 
@@ -137,6 +143,7 @@ function longitudesPrevias(arr){
     }
     return arr;
 }
+console.log('ejercicio 8 =');
 console.log(longitudesPrevias(["programar","dojo","genial"]));
 
 
@@ -152,6 +159,7 @@ function agregaSiete (arr){
     }
     return agrega;
 }
+console.log('ejercicio 9 =');
 console.log(agregaSiete([1,2,3]));
 
 /*Array Inverso - Dado un array, escribe una función que invierte sus valores en el lugar. 
@@ -168,6 +176,7 @@ function arrayInverso(arr){
     }
     return arr;
 }
+console.log('ejercicio 10 =');
 console.log(arrayInverso([2,3,5,7,8]));
 
 
@@ -189,6 +198,7 @@ function perspectivaNeg (arr){
     }
     return temp;
 }
+console.log('ejercicio 11 =');
 console.log(perspectivaNeg([1,3,5,-8]));
 
 
@@ -212,6 +222,7 @@ function siempreHambriento(arr){
         console.log('tengo hambre');
     }
 }
+console.log('ejercicio 12 =');
 siempreHambriento([2,8,3]);
 
 /*Cambiar hacia el centro -  Dado un array, cambia el primer y último valor, el tercero con el ante penútimo, etc.
@@ -227,7 +238,8 @@ function centro(x){
     }
     return x;
 }
-console.log(centro([1,2,3,4,5,6]));
+console.log('ejercicio 13 =');
+console.log(centro([1,2,3,4,6,5,6]));
 
 
 
@@ -238,7 +250,8 @@ function escala(x,y){
     for(i = 0; i < x.length ; i++){
         x[i]=x[i]*y;
     }
-
+    
     return x;
 }
-console.log(escala([1,2,3],3));
+console.log('ejercicio 14 =');
+console.log (escala([1,2,3],3));
